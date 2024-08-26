@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PowerActivity">
+
+    <TextView
+        android:id="@+id/tvDescrPower"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/tv_basic_style"
+        android:fontFamily="@font/orbitron_regular"
+        android:text="Find Power at given Distance"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tlAdditional" />
+
+    <EditText
+        android:id="@+id/etEta"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btn_style"
+        android:ems="10"
+        android:fontFamily="@font/orbitron_regular"
+        android:inputType="numberDecimal"
+        android:maxLength="3"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnUpEta" />
+
+    <ImageButton
+        android:id="@+id/btnUpEta"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="false"
+        android:background="@drawable/btn_style"
+        android:fontFamily="@font/orbitron_regular"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescrPower"
+        app:srcCompat="@drawable/arrow_up" />
+
+    <ImageButton
+        android:id="@+id/btnDownEta"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btn_style"
+        android:fontFamily="@font/orbitron_regular"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEta"
+        app:srcCompat="@drawable/arrow_down" />
+
+    <EditText
+        android:id="@+id/etDistRef"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/et_style"
+        android:ems="10"
+        android:fontFamily="@font/orbitron_regular"
+        android:hint="distance(0)"
+        android:inputType="numberDecimal"
+        android:maxLength="6"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/etPowerRef"
+        app:layout_constraintStart_toEndOf="@+id/btnUpEta"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescrPower" />
+
+    <EditText
+        android:id="@+id/etPowerRef"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/et_style"
+        android:ems="10"
+        android:fontFamily="@font/orbitron_regular"
+        android:hint="Power(0)"
+        android:inputType="numberSigned|numberDecimal"
+        android:maxLength="6"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescrPower" />
+
+    <EditText
+        android:id="@+id/etDist"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/et_style"
+        android:ems="10"
+        android:fontFamily="@font/orbitron_regular"
+        android:hint="distance"
+        android:maxLength="6"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toStartOf="@+id/etPowerRef"
+        app:layout_constraintStart_toEndOf="@+id/etEta"
+        app:layout_constraintTop_toBottomOf="@+id/etDistRef" />
+
+    <Button
+        android:id="@+id/btnFindPower"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/btn_style"
+        android:fontFamily="@font/orbitron_regular"
+        android:text="@string/calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/etDist"
+        app:layout_constraintTop_toBottomOf="@+id/etDist" />
+
+    <TextView
+        android:id="@+id/tvPower"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/tv_style"
+        android:fontFamily="@font/orbitron_regular"
+        android:gravity="center"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPowerRef" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="395dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/tv_basic_style"
+        android:fontFamily="@font/orbitron_regular"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFindPower" />
+
+    <TextView
+        android:id="@+id/tvDescriptionPoisson"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/tv_basic_style"
+        android:fontFamily="@font/orbitron_regular"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+    <TableLayout
+        android:id="@+id/tlAdditional"
+        android:layout_width="0dp"
+        android:layout_height="392dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:stretchColumns="*"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+            <TextView
+                android:id="@+id/tvPDescription"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/tv_basic_style"
+                android:fontFamily="@font/orbitron_regular"
+                android:text="TextView"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                tools:layout_editor_absoluteX="match_parent"
+                tools:layout_editor_absoluteY="89dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp">
+
+            <EditText
+                android:id="@+id/etPoissonTraffic"
+                android:layout_width="23dp"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/et_style"
+                android:ems="10"
+                android:fontFamily="@font/orbitron_regular"
+                android:hint="A"
+                android:inputType="numberDecimal"
+                android:maxLength="6"
+                android:textAlignment="center"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/etK"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_width="68dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/et_style"
+                android:ems="10"
+                android:fontFamily="@font/orbitron_regular"
+                android:hint="K"
+                android:inputType="number"
+                android:maxLength="6"
+                android:textAlignment="center"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btnPCalc"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_column="2"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/btn_style"
+                android:fontFamily="@font/orbitron_regular"
+                android:text="@string/calculate"
+                android:layout_marginLeft="8dp" />
+
+            <TextView
+                android:id="@+id/tvPres"
+                android:layout_width="68dp"
+                android:layout_height="match_parent"
+                android:layout_column="3"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/tv_style"
+                android:fontFamily="@font/orbitron_regular"
+                android:gravity="center"
+                android:textColor="#000000" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>
